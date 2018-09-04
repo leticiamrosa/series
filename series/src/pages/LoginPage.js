@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet, Button } from "react-native";
 
 import FormRow from "../components/FormRow";
 
@@ -10,6 +10,9 @@ const styles = StyleSheet.create({
   },
   input: {
     padding: 8
+  },
+  btnLogin: {
+    marginTop: 16,
   }
 });
 
@@ -25,6 +28,10 @@ export default class LoginPage extends React.Component {
 
   onChangeHandle(field, value) {
     this.setState({ [field]: value });
+  }
+
+  tryLogin() {
+    console.log(this.state);
   }
 
   render() {
@@ -51,6 +58,12 @@ export default class LoginPage extends React.Component {
             value={password}
           />
         </FormRow>
+        <View style={styles.btnLogin}> 
+          <Button 
+          title="Entrar" 
+          onPress={() => this.tryLogin()} 
+          />
+        </View>
       </View>
     );
   }

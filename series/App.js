@@ -8,7 +8,7 @@ const RootStack = createStackNavigator({
   Login: {
     screen: LoginPage,
     navigationOptions: () => ({
-      title: "Series",
+      title: "Minhas Series",
       headerTintcolor: "#eee",
       headerStyle: {
         backgroundColor: "#734098",
